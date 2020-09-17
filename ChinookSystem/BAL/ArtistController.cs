@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 //Additonal Namespaces
 using System.ComponentModel;
-using ChinookSystem.VIEWMODELS;
+using ChinookSystem.ViewModels;
 using ChinookSystem.DAL;
 
 namespace ChinookSystem.BLL

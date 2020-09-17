@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 //Additional Namespaces
 using System.Data.Entity;
-using ChinookSystem.ENTITIES;
+using ChinookSystem.Entities;
 
 namespace ChinookSystem.DAL
 {
