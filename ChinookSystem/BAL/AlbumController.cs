@@ -1,38 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//Additonal Namespaces
+//Additional Namespaces
 using System.ComponentModel;
-using ChinookSystem.ViewModels;
 using ChinookSystem.DAL;
+using ChinookSystem.ViewModels;
 
-namespace ChinookSystem.BAL
+namespace ChinookSystem.BLL
 {
     [DataObject]
     public class AlbumController
     {
         [DataObjectMethod(DataObjectMethodType.Select, false)]
-        public List<AlbumViewModel> Album_List()
+        public List<AlbumViewModel> Albums_List()
         {
             using (var context = new ChinookSystemContext())
             {
-                //linq query
-                //linq queries are returned as IEnumerable or IQueryable datasets
-                //you can use var when declaring your query receiving variable
                 var results = from x in context.Albums
                               select new AlbumViewModel
                               {
                                   AlbumId = x.AlbumId,
-                                  Title = x.Title,
+                                  AlbumTitle = x.Title,
                                   ArtistId = x.ArtistId,
-                                  ReleaseYear = x.ReleaseYear,
-                                  ReleaseLabel = x.ReleaseLabel
+                                  AlbumReleaseYear = x.ReleaseYear,
+                                  AlbumReleaseLabel = x.ReleaseLabel
                               };
-                return results.OrderBy(x => x.AlbumId).ToList();
+                return results.ToList();
             }
         }
     }
