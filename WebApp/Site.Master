@@ -82,6 +82,10 @@
                                         href="~/SamplePages/P04_CGVofTracks.aspx"
                                         style="color:black" runat="server">
                                    P04 Custom Drop-down-list of Tracks</a>
+                                <a class="dropdown-item"
+                                        href="~/SamplePages/P05_DDLofArtistsToCGVofAlbumsbyArtistId.aspx"
+                                        style="color:black" runat="server">
+                                   P05 DDLofArtists to CGVofAlbumsbyArtistId</a>
                             </div>
                          </li>
                          <li class="nav-item">
