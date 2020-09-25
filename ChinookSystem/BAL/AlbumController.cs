@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//Additional Namespaces
+#region Additional Namespaces
 using System.ComponentModel;
 using ChinookSystem.DAL;
 using ChinookSystem.ViewModels;
+using ChinookSystem.Entities;
+#endregion
 
 namespace ChinookSystem.BLL
 {
@@ -51,5 +53,65 @@ namespace ChinookSystem.BLL
             }
         }
         #endregion Queries
+
+        #region Insert,Update,Delete
+
+        //REMEMBER to add the DataKeyNames="AlbumId" 
+        //attribute to your ListView so that Delete will work
+
+        [DataObjectMethod(DataObjectMethodType.Insert, false)]
+        public void Albums_Insert(AlbumViewModel item)
+        {
+            using (var context = new ChinookSystemContext())
+            {
+                Album info = new Album()
+                {
+                    Title = item.AlbumTitle,
+                    ArtistId = item.ArtistId,
+                    ReleaseYear = item.AlbumReleaseYear,
+                    ReleaseLabel = item.AlbumReleaseLabel
+                };
+                context.Albums.Add(info);
+                context.SaveChanges();
+            }
+        }
+
+        [DataObjectMethod(DataObjectMethodType.Update, false)]
+        public void Albums_Update(AlbumViewModel item)
+        {
+            using (var context = new ChinookSystemContext())
+            {
+                Album info = new Album()
+                {
+                    AlbumId = item.AlbumId,
+                    Title = item.AlbumTitle,
+                    ArtistId = item.ArtistId,
+                    ReleaseYear = item.AlbumReleaseYear,
+                    ReleaseLabel = item.AlbumReleaseLabel
+                };
+                context.Entry(info).State = System.Data.Entity.EntityState.Modified;
+                context.SaveChanges();
+            }
+        }
+
+        [DataObjectMethod(DataObjectMethodType.Delete, false)]
+        public void Albums_Delete(AlbumViewModel item)
+        {
+            using (var context = new ChinookSystemContext())
+            {
+                Albums_Delete(item.AlbumId);
+            }
+        }
+
+        public void Albums_Delete(int albumid)
+        {
+            using (var context = new ChinookSystemContext())
+            {
+                var existing = context.Albums.Find(albumid);
+                context.Albums.Remove(existing);
+                context.SaveChanges();
+            }
+        }
+        #endregion
     }
 }

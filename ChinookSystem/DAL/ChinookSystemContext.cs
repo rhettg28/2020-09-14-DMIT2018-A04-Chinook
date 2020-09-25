@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//Additional Namespaces
+#region Additional Namespaces
 using System.Data.Entity;
 using ChinookSystem.Entities;
+#endregion
 
 namespace ChinookSystem.DAL
 {
@@ -16,7 +17,6 @@ namespace ChinookSystem.DAL
         {
 
         }
-
         public DbSet<Artist> Artists { get; set; }
         public DbSet<Album> Albums { get; set; }
         public DbSet<Track> Tracks { get; set; }
