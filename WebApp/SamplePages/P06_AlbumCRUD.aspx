@@ -9,7 +9,8 @@
     <br />
     <div class="row">
         <asp:ListView ID="ListView1" runat="server"></asp:ListView>
-        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server"></asp:ObjectDataSource>
+        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" DataObjectTypeName="ChinookSystem.ViewModels.AlbumViewModel" DeleteMethod="Albums_Delete" InsertMethod="Albums_Insert" 
+            OldValuesParameterFormatString="original_{0}" SelectMethod="Albums_List" TypeName="ChinookSystem.BLL.AlbumController" UpdateMethod="Albums_Update"></asp:ObjectDataSource>
     </div>
     <br />
     <div class="row">
