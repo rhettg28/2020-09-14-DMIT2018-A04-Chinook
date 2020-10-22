@@ -90,6 +90,10 @@
                                         href="~/SamplePages/P06_AlbumCRUD.aspx"
                                         style="color:black" runat="server">
                                    P06 Album CRUD</a>
+                                <a class="dropdown-item"
+                                        href="~/SamplePages/ODSRepeater.aspx"
+                                        style="color:black" runat="server">
+                                   ODS Repeater</a>
                             </div>
                          </li>
                          <li class="nav-item">
