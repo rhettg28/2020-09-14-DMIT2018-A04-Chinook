@@ -91,9 +91,13 @@
                                         style="color:black" runat="server">
                                    P06 Album CRUD</a>
                                 <a class="dropdown-item"
-                                        href="~/SamplePages/ODSRepeater.aspx"
+                                        href="~/SamplePages/P07_ODSRepeater.aspx"
                                         style="color:black" runat="server">
-                                   ODS Repeater</a>
+                                   P07 ODS Repeater</a>
+                                <a class="dropdown-item"
+                                        href="~/SamplePages/P08_OLTP_Demo.aspx"
+                                        style="color:black" runat="server">
+                                   P08 Online Transaction Process</a>
                             </div>
                          </li>
                          <li class="nav-item">
@@ -133,7 +137,7 @@
         </div>
 
 
-        <div class="container body-content">
+        <div class="container-fluid">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
