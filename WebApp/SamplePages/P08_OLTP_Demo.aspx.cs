@@ -45,6 +45,21 @@ namespace WebApp.SamplePages
         {
         }
 
+        protected void TracksSelectionList_ItemCommand(object sender, ListViewCommandEventArgs e)
+        {
+            //if (e.CommandName == "AddToMyPlayList")
+            //{
+            //    UserPlayListTrack item = GetTrackFromTracksListToAddToPlayList(e.Item);
+            //    var playListItems = GetPlayListItemsFromGridView();
+            //    playListItems.Insert(0, item);
+            //    MyPlayList.DataSource = playListItems;
+            //    MyPlayList.DataBind();
+            //    e.Handled = true;
+            //}
+        }
+
+
+
         #region Error Handling
         protected void CheckForException(object sender, ObjectDataSourceStatusEventArgs e)
         {

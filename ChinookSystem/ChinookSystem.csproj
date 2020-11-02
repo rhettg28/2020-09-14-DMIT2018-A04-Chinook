@@ -86,6 +86,7 @@
     <Compile Include="ViewModels\PlayListItem.cs" />
     <Compile Include="ViewModels\PlayListSong.cs" />
     <Compile Include="ViewModels\SelectionList.cs" />
+    <Compile Include="ViewModels\TrackList.cs" />
     <Compile Include="ViewModels\TrackViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
