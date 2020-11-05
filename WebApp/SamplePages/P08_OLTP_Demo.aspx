@@ -220,10 +220,13 @@
                 No data to view for the playlist.
                 </EmptyDataTemplate>
             </asp:GridView>
+
+
         </div>
     </div>
 
-    <asp:ObjectDataSource ID="MediaTypeDDLODS" runat="server" 
+
+     <asp:ObjectDataSource ID="MediaTypeDDLODS" runat="server" 
         OldValuesParameterFormatString="original_{0}" 
         SelectMethod="List_MediaTypeNames" 
         TypeName="ChinookSystem.BLL.MediaTypeController"
