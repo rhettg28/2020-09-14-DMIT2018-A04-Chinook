@@ -88,6 +88,7 @@
     <Compile Include="ViewModels\SelectionList.cs" />
     <Compile Include="ViewModels\TrackList.cs" />
     <Compile Include="ViewModels\TrackViewModel.cs" />
+    <Compile Include="ViewModels\UserPlayListTrack.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
